@@ -1,14 +1,12 @@
-FROM nginx
+FROM nginx:alpine
 
-# Install modules
-RUN apt-get update && apt-get install -y \
-    g++ \
-    zip \
-    vim \
-    curl \
-    openssl \
-    libssl-dev \
-    --no-install-recommends apt-utils \
-    && rm -r /var/lib/apt/lists/*
+#RUN apk update && apk add \
+#    g++ \
+#    zip \
+#    vim \
+#    curl \
+#    openssl \
+#    libssl1.1 \
+#    --no-cache
 
 WORKDIR /usr/src/app
