@@ -2,5 +2,7 @@ FROM nginx:alpine
 
 WORKDIR /usr/src/app
 
+RUN rm /etc/nginx/conf.d/*
+
 # Add this line to copy the nginx configuration
-COPY ./nginx/conf /etc/nginx/conf.d
+COPY default-http.conf /etc/nginx/conf.d
